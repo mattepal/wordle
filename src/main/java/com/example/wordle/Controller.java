@@ -96,7 +96,7 @@ public class Controller {
     //Button click event
     @FXML
     protected void checkGuess() throws IOException {
-        Label[] row = {box00, box01, box02, box03, box04};
+        //Label[] row = {box00, box01, box02, box03, box04};
         Label[][] matrix = {
                 {box00, box01, box02, box03, box04},
                 {box10, box11, box12, box13, box14},
