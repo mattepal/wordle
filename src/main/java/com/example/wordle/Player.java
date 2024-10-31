@@ -20,14 +20,12 @@ public class Player {
         }
     }
 
-    //probabilmente inutile e inutilizzato
     public boolean isOutOfIndex(){
         if(attempts.size()>=MAX_ATTEMPT){
             return true;
         }
         return false;
     }
-    //
 
     public List<Attempt> getAttempts() {
         return attempts;
