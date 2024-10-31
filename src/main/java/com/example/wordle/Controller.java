@@ -115,15 +115,15 @@ public class Controller {
                 Attempt currentAttempt = player.getAttempts().get(player.getAttempts().size()-1);
                 for(int i = 0; i < currentAttempt.getResult().length(); i++){
                     String letter = guess.substring(i,i+1);
-                    row[i].setText(letter);
+                    matrix[player.getAttempts().size()-1][i].setText(letter);
                     if(currentAttempt.getResult().charAt(i) == 'G'){    //lettera presente in posizione corretta
-                        row[i].setStyle("-fx-background-color: #02a302");
+                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #02a302");
                     }
                     else if(currentAttempt.getResult().charAt(i) == 'Y'){    //lettera presente in posizione errata
-                        row[i].setStyle("-fx-background-color: #d9d904");
+                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #d9d904");
                     }
                     else if(currentAttempt.getResult().charAt(i) == 'R'){    //lettera assente
-                        row[i].setStyle("-fx-background-color: white");
+                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: white");
                     }
                 }
                 if(word.checkMatch(guess)){
