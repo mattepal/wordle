@@ -96,7 +96,6 @@ public class Controller {
     //Button click event
     @FXML
     protected void checkGuess() throws IOException {
-        //Label[] row = {box00, box01, box02, box03, box04};
         Label[][] matrix = {
                 {box00, box01, box02, box03, box04},
                 {box10, box11, box12, box13, box14},
@@ -108,6 +107,9 @@ public class Controller {
         if(!player.isOutOfIndex()){
             if(guess.length() != word.getWord().length()){
                 DebugLabel.setText("Incorrect string length!");
+            }
+            else if(!word.isInsideMap(guess)){
+                DebugLabel.setText("String not exist in dictionary!");
             }
             else{   // Lunghezza della parola inserita corretta
                 DebugLabel.setText("Write here a word");
