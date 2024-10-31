@@ -13,7 +13,7 @@ public class Word {
     public Word() {
         this.word = getRandomWord();
     }
-    public String getRandomWord(){
+    public static String getRandomWord(){
         RandomGenerator rnd= RandomGenerator.getDefault();
         int randKey=rnd.nextInt(wordsMap.size())+1;
         return wordsMap.get(randKey);
@@ -24,6 +24,7 @@ public class Word {
     public boolean checkMatch(String guess){
         return word.equals(guess);
     }
+
 //    public static void main(String[] args) {
 //        // Creazione di un'istanza di Word e stampa della parola casuale
 //        Word randomWord = new Word();

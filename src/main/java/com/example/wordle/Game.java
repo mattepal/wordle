@@ -1,9 +1,15 @@
 package com.example.wordle;
 
 public class Game {
-    int a=0;
+    Word word;
+    Player player;
 
-    public Game(int a) {
-        this.a = a;
+    public Game(Word word, Player player) {
+        this.word = new Word();
+        this.player = new Player();
+    }
+
+    public void startGame(String word){
+
     }
 }

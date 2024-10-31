@@ -20,7 +20,6 @@ public class Attempt {
                 result.append("R");
             }
         }
-
         return result.toString();
     }
 
