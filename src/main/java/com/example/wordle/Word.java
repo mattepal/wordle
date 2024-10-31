@@ -24,9 +24,9 @@ public class Word {
     public boolean checkMatch(String guess){
         return word.equals(guess);
     }
-    public static void main(String[] args) {
-        // Creazione di un'istanza di Word e stampa della parola casuale
-        Word randomWord = new Word();
-        System.out.println("Parola casuale: " + randomWord.getWord());
-    }
+//    public static void main(String[] args) {
+//        // Creazione di un'istanza di Word e stampa della parola casuale
+//        Word randomWord = new Word();
+//        System.out.println("Parola casuale: " + randomWord.getWord());
+//    }
 }
