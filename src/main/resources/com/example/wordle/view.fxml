@@ -24,7 +24,51 @@
          <center>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;" text="#">
                            <font>
@@ -68,51 +112,7 @@
                         </Label>
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;" text="#">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;" text="#">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;" text="#">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;" text="#">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;" text="#">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;" text="#">
                            <font>
@@ -160,9 +160,9 @@
             </VBox>
          </center>
          <bottom>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField />
+                  <TextField fx:id="guessInput" alignment="CENTER" maxWidth="-Infinity" prefHeight="26.0" prefWidth="176.0" />
                   <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Button">
                      <font>
                         <Font size="15.0" />
