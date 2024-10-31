@@ -1,8 +1,13 @@
 package com.example.wordle;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Controller {
     @FXML
@@ -30,13 +35,14 @@ public class Controller {
 
     }
 
+    //Button click event
     @FXML
-    protected void checkGuess() {
+    protected void checkGuess() throws IOException {
         Label[] row = {box00, box01, box02, box03, box04};
         String guess = guessInput.getText();
         if(!player.isOutOfIndex()){
             if(guess.length() != word.getWord().length()){
-                DebugLabel.setText("Too short string!");
+                DebugLabel.setText("Incorrect string length!");
             }
             else{   // Lunghezza della parola inserita corretta
                 DebugLabel.setText("Write here a word");
@@ -57,11 +63,23 @@ public class Controller {
                 }
                 if(word.checkMatch(guess)){
                     DebugLabel.setText("Right Word");
+                    FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/com/example/wordle/win-popup.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load());
+                    Stage stage = new Stage();
+                    stage.setTitle("WIN");
+                    stage.setScene(scene);
+                    stage.show();
                 }
             }
         }
         else{
             DebugLabel.setText("Number of attempt out of bound!!");
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/com/example/wordle/lose-popup.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = new Stage();
+            stage.setTitle("LOST");
+            stage.setScene(scene);
+            stage.show();
         }
     }
 }
