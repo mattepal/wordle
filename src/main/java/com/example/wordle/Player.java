@@ -11,11 +11,13 @@ public class Player {
         attempts=new ArrayList<>();
     }
     public boolean addAttempts(String word,String guess){
-        if (attempts.size()<MAX_ATTEMPT){
-            attempts.add(new Attempt(guess,word));
+        attempts.add(new Attempt(guess,word));
+        if (attempts.size()<=MAX_ATTEMPT){
             return true;
         }
-        return false;
+        else {
+            return false;
+        }
     }
 
     //probabilmente inutile e inutilizzato
