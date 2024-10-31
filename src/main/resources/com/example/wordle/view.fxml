@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.Controller">
    <children>
       <BorderPane layoutX="10.0" layoutY="14.0" prefHeight="470.0" prefWidth="666.0">
          <top>
@@ -26,7 +25,7 @@
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                        <Label fx:id="box00" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
                            <font>
                               <Font size="48.0" />
                            </font>
@@ -34,7 +33,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Label>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                        <Label fx:id="box01" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
                            <font>
                               <Font size="48.0" />
                            </font>
@@ -42,7 +41,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Label>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                        <Label fx:id="box02" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
                            <font>
                               <Font size="48.0" />
                            </font>
@@ -50,7 +49,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Label>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                        <Label fx:id="box03" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
                            <font>
                               <Font size="48.0" />
                            </font>
@@ -58,7 +57,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </HBox.margin>
                         </Label>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
+                        <Label fx:id="box04" alignment="CENTER" contentDisplay="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-border-color: black;">
                            <font>
                               <Font size="48.0" />
                            </font>
@@ -162,8 +161,9 @@
          <bottom>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
+                  <Label fx:id="DebugLabel" />
                   <TextField fx:id="guessInput" alignment="CENTER" maxWidth="-Infinity" prefHeight="26.0" prefWidth="176.0" />
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Button">
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#checkGuess" text="Button">
                      <font>
                         <Font size="15.0" />
                      </font>
