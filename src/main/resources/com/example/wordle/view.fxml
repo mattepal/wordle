@@ -509,7 +509,7 @@
                   </Label>
                </children>
             </HBox>
-            <Label fx:id="DebugLabel" alignment="CENTER" prefHeight="39.0" prefWidth="370.0">
+            <Label fx:id="DebugLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="594.0">
                <font>
                   <Font size="27.0" />
                </font></Label>

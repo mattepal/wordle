@@ -147,7 +147,6 @@ public class Controller {
     public void initialize() {
         player = new Player();
         word = new Word();
-        //DebugLabel.setText("Write here a word");
         letterWrite=new ArrayList<Character>();
     }
 
@@ -161,59 +160,64 @@ public class Controller {
                 {box30, box31, box32, box33, box34},
                 {box40, box41, box42, box43, box44},
                 {box50, box51, box52, box53, box54}};
-        Label[] letters={a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
+
+        Label[] letters = {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z};
+
         String guess = guessInput.getText();
-        if(!player.isOutOfIndex()){
-            if (guess.contains(" ")){
-                DebugLabel.setText("The string contain whitespace!");
-                guessInput.clear();
-            }
-            else if(guess.length() != word.getWord().length()){
-                DebugLabel.setText("Incorrect string length!");
-                guessInput.clear();
-            }
-            else if(!word.isInsideMap(guess)){
-                DebugLabel.setText("String not exist in dictionary!");
-                guessInput.clear();
-            }
-            else{   // Lunghezza della parola inserita corretta
-                DebugLabel.setText("Write here a word");
-                guessInput.clear();
-                player.addAttempts(word.getWord(), guess);
-                Attempt currentAttempt = player.getAttempts().get(player.getAttempts().size()-1);
-                for(int i = 0; i < currentAttempt.getResult().length(); i++){
-                    String letter = guess.substring(i,i+1);
-                    if (!letterWrite.contains(letter)){
-                        letterWrite.add(letter.charAt(0));
-                        for (int j = 0; j <letters.length ; j++) {
-                            if (letters[j].getText().equalsIgnoreCase(letter)){
-                                letters[j].setStyle("-fx-background-color: #21282d;" + "-fx-border-color: black;"+"-fx-text-fill: white");
-                            }
-                        }
-                    }
-                    matrix[player.getAttempts().size()-1][i].setText(letter);
-                    if(currentAttempt.getResult().charAt(i) == 'G'){    //lettera presente in posizione corretta
-                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #02a302;" + "-fx-border-color: black;");
-                    }
-                    else if(currentAttempt.getResult().charAt(i) == 'Y'){    //lettera presente in posizione errata
-                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #d9d904;" + "-fx-border-color: black;");
-                    }
-                    else if(currentAttempt.getResult().charAt(i) == 'R'){    //lettera assente
-                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: white;" + "-fx-border-color: black;");
+
+        if (guess.contains(" ")) {
+            DebugLabel.setText("The string contains whitespace!");
+            guessInput.clear();
+            return;
+        } else if (guess.length() != word.getWord().length()) {
+            DebugLabel.setText("Incorrect string length!");
+            guessInput.clear();
+            return;
+        } else if (!word.isInsideMap(guess)) {
+            DebugLabel.setText("String not found in dictionary!");
+            guessInput.clear();
+            return;
+        }
+
+        guessInput.clear();
+        DebugLabel.setText(" ");
+        player.addAttempts(word.getWord(), guess);
+        Attempt currentAttempt = player.getAttempts().get(player.getAttempts().size() - 1);
+
+        for (int i = 0; i < currentAttempt.getResult().length(); i++) {
+            String letter = guess.substring(i, i + 1);
+
+            if (!letterWrite.contains(letter)) {
+                letterWrite.add(letter.charAt(0));
+                for (Label letterLabel : letters) {
+                    if (letterLabel.getText().equalsIgnoreCase(letter)) {
+                        letterLabel.setStyle("-fx-background-color: #21282d; -fx-border-color: black; -fx-text-fill: white");
                     }
                 }
-                if(word.checkMatch(guess)){
-                    DebugLabel.setText("Right Word");
-                    FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/com/example/wordle/win-popup.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load());
-                    secondaryStage.setTitle("WIN");
-                    secondaryStage.setScene(scene);
-                    secondaryStage.show();
-                }
+            }
+
+            matrix[player.getAttempts().size() - 1][i].setText(letter);
+
+            if (currentAttempt.getResult().charAt(i) == 'G') {
+                matrix[player.getAttempts().size() - 1][i].setStyle("-fx-background-color: #02a302; -fx-border-color: black;");
+            } else if (currentAttempt.getResult().charAt(i) == 'Y') {
+                matrix[player.getAttempts().size() - 1][i].setStyle("-fx-background-color: #d9d904; -fx-border-color: black;");
+            } else if (currentAttempt.getResult().charAt(i) == 'R') {
+                matrix[player.getAttempts().size() - 1][i].setStyle("-fx-background-color: white; -fx-border-color: black;");
             }
         }
-        else{
-            DebugLabel.setText("Number of attempt out of bound!!");
+
+        if (word.checkMatch(guess)) {
+            DebugLabel.setText("Right Word!");
+            FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/com/example/wordle/win-popup.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            secondaryStage.setTitle("WIN");
+            secondaryStage.setScene(scene);
+            secondaryStage.show();
+        }
+        else if (player.isOutOfIndex()) {
+            DebugLabel.setText("Number of attempts exhausted!");
+
             FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/com/example/wordle/lose-popup.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             secondaryStage.setTitle("LOST");
