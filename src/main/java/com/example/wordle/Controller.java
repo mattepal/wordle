@@ -120,6 +120,10 @@ public class Controller {
     @FXML
     private Label t = new Label();
     @FXML
+    private Label u = new Label();
+    @FXML
+    private Label v = new Label();
+    @FXML
     private Label w = new Label();
     @FXML
     private Label x = new Label();
