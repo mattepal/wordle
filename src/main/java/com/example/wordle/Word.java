@@ -37,7 +37,6 @@ public class Word {
     public Word() {
         this.word = getRandomWord();
         System.out.println(word);
-
     }
 
     public String getRandomWord() {
