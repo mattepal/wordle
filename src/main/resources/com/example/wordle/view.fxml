@@ -293,11 +293,17 @@
       </BorderPane>
       <VBox alignment="CENTER" layoutX="-1.0" layoutY="549.0" prefHeight="184.0" prefWidth="687.0">
          <children>
-            <Label fx:id="DebugLabel" />
-            <TextField fx:id="guessInput" alignment="CENTER" maxWidth="-Infinity" prefHeight="26.0" prefWidth="176.0" promptText="Insert here a word" />
-            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#checkGuess" text="CHECK">
+            <Label fx:id="DebugLabel" alignment="CENTER" prefHeight="39.0" prefWidth="370.0">
                <font>
-                  <Font size="15.0" />
+                  <Font size="27.0" />
+               </font></Label>
+            <TextField fx:id="guessInput" alignment="CENTER" maxWidth="-Infinity" prefHeight="43.0" prefWidth="262.0" promptText="Insert here a word">
+               <font>
+                  <Font size="20.0" />
+               </font></TextField>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#checkGuess" prefHeight="41.0" prefWidth="82.0" text="CHECK">
+               <font>
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Button>
          </children>

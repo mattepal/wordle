@@ -31,7 +31,7 @@ public class Word {
         return wordMap;
     }
     private String word;
-    private String filePath = "C:\\Users\\antonella\\OneDrive\\Desktop\\github-project\\wordle\\src\\main\\java\\com\\example\\wordle\\wordList.txt"; // Inserisci qui il percorso del file
+    private String filePath = "src/main/java/com/example/wordle/wordList.txt"; // Inserisci qui il percorso del file
     private final Map<Integer, String> wordsMap = loadWordsIntoMap(filePath);
 
     public Word() {

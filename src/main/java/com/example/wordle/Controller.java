@@ -85,11 +85,13 @@ public class Controller {
     private Player player;
     private Word word;
     int row;
+    @FXML
+    static Stage secondaryStage = new Stage();
 
     public void initialize() {
         player = new Player();
         word = new Word();
-        DebugLabel.setText("Write here a word");
+        //DebugLabel.setText("Write here a word");
         row = 0;
     }
 
@@ -132,10 +134,9 @@ public class Controller {
                     DebugLabel.setText("Right Word");
                     FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/com/example/wordle/win-popup.fxml"));
                     Scene scene = new Scene(fxmlLoader.load());
-                    Stage stage = new Stage();
-                    stage.setTitle("WIN");
-                    stage.setScene(scene);
-                    stage.show();
+                    secondaryStage.setTitle("WIN");
+                    secondaryStage.setScene(scene);
+                    secondaryStage.show();
                 }
             }
         }
@@ -143,10 +144,14 @@ public class Controller {
             DebugLabel.setText("Number of attempt out of bound!!");
             FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/com/example/wordle/lose-popup.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            Stage stage = new Stage();
-            stage.setTitle("LOST");
-            stage.setScene(scene);
-            stage.show();
+            secondaryStage.setTitle("LOST");
+            secondaryStage.setScene(scene);
+            secondaryStage.show();
         }
+    }
+
+    @FXML
+    public void restartButton() throws IOException{
+        Application.restart();
     }
 }
