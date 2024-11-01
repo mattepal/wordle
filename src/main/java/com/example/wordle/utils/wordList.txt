@@ -20,6 +20,7 @@ anima
 animo
 anime
 ansia
+cisti
 antro
 arido
 arida
@@ -68,6 +69,7 @@ busto
 cacca
 caldo
 calmo
+calma
 campo
 canne
 canto
@@ -91,10 +93,12 @@ collo
 colto
 comma
 conto
+conte
 corpo
 corse
 corsa
 corta
+corte
 corto
 cosca
 cosci
@@ -119,6 +123,7 @@ elica
 erede
 erica
 feria
+festa
 ferie
 ferio
 ferro
@@ -137,6 +142,7 @@ gamba
 gatto
 genio
 gesso
+gesto
 giada
 gioco
 gobba
@@ -185,6 +191,8 @@ ombra
 opera
 orari
 palio
+palmo
+palma
 palla
 panna
 panni
@@ -199,8 +207,10 @@ piano
 piace
 piede
 pista
+piste
 piuma
 pesto
+peste
 poeta
 polpa
 porto
@@ -209,6 +219,7 @@ presa
 prova
 provi
 pugno
+punta
 puroa
 puzza
 quale
@@ -228,6 +239,7 @@ scemo
 scopo
 senso
 senza
+sedia
 seria
 sfera
 sigla
@@ -244,6 +256,7 @@ stilo
 stima
 tempo
 tenda
+tende
 tento
 terra
 testa
@@ -279,5 +292,7 @@ volpe
 vuoto
 zaino
 zebra
+mensa
 zenza
 zitto
+mente
