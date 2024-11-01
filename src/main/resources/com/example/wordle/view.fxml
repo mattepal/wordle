@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.Controller">
    <children>
-      <BorderPane layoutX="10.0" layoutY="14.0" prefHeight="470.0" prefWidth="666.0">
+      <BorderPane layoutX="35.0" layoutY="14.0" prefHeight="470.0" prefWidth="666.0">
          <top>
             <Label text="WORDLE GAME" BorderPane.alignment="CENTER">
                <font>
@@ -21,7 +21,7 @@
             </Label>
          </top>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="490.0" prefWidth="711.0" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
@@ -291,8 +291,204 @@
             </VBox>
          </center>
       </BorderPane>
-      <VBox alignment="CENTER" layoutX="-1.0" layoutY="549.0" prefHeight="184.0" prefWidth="687.0">
+      <VBox alignment="CENTER" layoutY="558.0" prefHeight="184.0" prefWidth="716.0">
          <children>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="709.0">
+               <children>
+                  <Label fx:id="a" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="A">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="b" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="B">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="c" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="C">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="d" alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="D">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="E">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="F">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="G">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="H">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="I">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="J">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="K">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="L">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="M">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="N">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="O">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="P">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="Q">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="R">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="S">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="T">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="W">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="X">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="Y">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="-Infinity" prefWidth="30.0" style="-fx-border-color: BLACK;" text="Z">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
             <Label fx:id="DebugLabel" alignment="CENTER" prefHeight="39.0" prefWidth="370.0">
                <font>
                   <Font size="27.0" />
@@ -306,6 +502,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
+            <Label text="Label" />
          </children>
       </VBox>
    </children>

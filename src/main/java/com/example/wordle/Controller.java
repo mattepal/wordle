@@ -78,6 +78,56 @@ public class Controller {
     private Label box53 = new Label();
     @FXML
     private Label box54 = new Label();
+    // alfhabet
+    @FXML
+    private Label a = new Label();
+    @FXML
+    private Label b = new Label();
+    @FXML
+    private Label c = new Label();
+    @FXML
+    private Label d = new Label();
+    @FXML
+    private Label e = new Label();
+    @FXML
+    private Label f = new Label();
+    @FXML
+    private Label g = new Label();
+    @FXML
+    private Label h = new Label();
+    @FXML
+    private Label i = new Label();
+    @FXML
+    private Label j = new Label();
+    @FXML
+    private Label k = new Label();
+    @FXML
+    private Label l = new Label();
+    @FXML
+    private Label m = new Label();
+    @FXML
+    private Label n = new Label();
+    @FXML
+    private Label o = new Label();
+    @FXML
+    private Label p = new Label();
+    @FXML
+    private Label q = new Label();
+    @FXML
+    private Label r = new Label();
+    @FXML
+    private Label s = new Label();
+    @FXML
+    private Label t = new Label();
+    @FXML
+    private Label w = new Label();
+    @FXML
+    private Label x = new Label();
+    @FXML
+    private Label y = new Label();
+    @FXML
+    private Label z = new Label();
+
 
     @FXML
     private Label DebugLabel;
