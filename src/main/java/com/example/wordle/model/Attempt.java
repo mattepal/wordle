@@ -1,4 +1,4 @@
-package com.example.wordle;
+package com.example.wordle.model;
 
 public class Attempt {
     private String guess;

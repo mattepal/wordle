@@ -13,4 +13,8 @@ module com.example.wordle {
 
     opens com.example.wordle to javafx.fxml;
     exports com.example.wordle;
+    exports com.example.wordle.controller;
+    opens com.example.wordle.controller to javafx.fxml;
+    exports com.example.wordle.model;
+    opens com.example.wordle.model to javafx.fxml;
 }

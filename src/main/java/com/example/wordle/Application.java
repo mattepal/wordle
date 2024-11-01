@@ -1,5 +1,6 @@
 package com.example.wordle;
 
+import com.example.wordle.controller.Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

@@ -1,4 +1,6 @@
-package com.example.wordle;
+package com.example.wordle.model;
+
+import com.example.wordle.model.Attempt;
 
 import java.util.ArrayList;
 import java.util.List;

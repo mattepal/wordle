@@ -1,5 +1,9 @@
-package com.example.wordle;
+package com.example.wordle.controller;
 
+import com.example.wordle.Application;
+import com.example.wordle.model.Attempt;
+import com.example.wordle.model.Player;
+import com.example.wordle.model.Word;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -142,7 +146,7 @@ public class Controller {
     private Word word;
     private List<Character> letterWrite;
     @FXML
-    static Stage secondaryStage = new Stage();
+    public static Stage secondaryStage = new Stage();
 
     public void initialize() {
         player = new Player();
@@ -226,8 +230,4 @@ public class Controller {
         }
     }
 
-    @FXML
-    public void restartButton() throws IOException{
-        Application.restart();
-    }
 }
