@@ -157,7 +157,11 @@ public class Controller {
                 {box50, box51, box52, box53, box54}};
         String guess = guessInput.getText();
         if(!player.isOutOfIndex()){
-            if(guess.length() != word.getWord().length()){
+            if (guess.contains(" ")){
+                DebugLabel.setText("The string contain whitespace!");
+                guessInput.clear();
+            }
+            else if(guess.length() != word.getWord().length()){
                 DebugLabel.setText("Incorrect string length!");
                 guessInput.clear();
             }
@@ -166,7 +170,7 @@ public class Controller {
                 guessInput.clear();
             }
             else{   // Lunghezza della parola inserita corretta
-                //DebugLabel.setText("Write here a word");
+                DebugLabel.setText("Write here a word");
                 guessInput.clear();
                 player.addAttempts(word.getWord(), guess);
                 Attempt currentAttempt = player.getAttempts().get(player.getAttempts().size()-1);
