@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Controller {
     @FXML
@@ -138,7 +140,7 @@ public class Controller {
 
     private Player player;
     private Word word;
-    int row;
+    private List<Character> letterWrite;
     @FXML
     static Stage secondaryStage = new Stage();
 
@@ -146,7 +148,7 @@ public class Controller {
         player = new Player();
         word = new Word();
         //DebugLabel.setText("Write here a word");
-        row = 0;
+        letterWrite=new ArrayList<Character>();
     }
 
     //Button click event
@@ -159,6 +161,7 @@ public class Controller {
                 {box30, box31, box32, box33, box34},
                 {box40, box41, box42, box43, box44},
                 {box50, box51, box52, box53, box54}};
+        Label[] letters={a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z};
         String guess = guessInput.getText();
         if(!player.isOutOfIndex()){
             if (guess.contains(" ")){
@@ -180,6 +183,14 @@ public class Controller {
                 Attempt currentAttempt = player.getAttempts().get(player.getAttempts().size()-1);
                 for(int i = 0; i < currentAttempt.getResult().length(); i++){
                     String letter = guess.substring(i,i+1);
+                    if (!letterWrite.contains(letter)){
+                        letterWrite.add(letter.charAt(0));
+                        for (int j = 0; j <letters.length ; j++) {
+                            if (letters[j].getText().equalsIgnoreCase(letter)){
+                                letters[j].setStyle("-fx-background-color: #21282d;" + "-fx-border-color: black;"+"-fx-text-fill: white");
+                            }
+                        }
+                    }
                     matrix[player.getAttempts().size()-1][i].setText(letter);
                     if(currentAttempt.getResult().charAt(i) == 'G'){    //lettera presente in posizione corretta
                         matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #02a302;" + "-fx-border-color: black;");
