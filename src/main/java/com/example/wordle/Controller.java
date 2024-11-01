@@ -109,25 +109,28 @@ public class Controller {
         if(!player.isOutOfIndex()){
             if(guess.length() != word.getWord().length()){
                 DebugLabel.setText("Incorrect string length!");
+                guessInput.clear();
             }
             else if(!word.isInsideMap(guess)){
                 DebugLabel.setText("String not exist in dictionary!");
+                guessInput.clear();
             }
             else{   // Lunghezza della parola inserita corretta
-                DebugLabel.setText("Write here a word");
+                //DebugLabel.setText("Write here a word");
+                guessInput.clear();
                 player.addAttempts(word.getWord(), guess);
                 Attempt currentAttempt = player.getAttempts().get(player.getAttempts().size()-1);
                 for(int i = 0; i < currentAttempt.getResult().length(); i++){
                     String letter = guess.substring(i,i+1);
                     matrix[player.getAttempts().size()-1][i].setText(letter);
                     if(currentAttempt.getResult().charAt(i) == 'G'){    //lettera presente in posizione corretta
-                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #02a302");
+                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #02a302;" + "-fx-border-color: black;");
                     }
                     else if(currentAttempt.getResult().charAt(i) == 'Y'){    //lettera presente in posizione errata
-                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #d9d904");
+                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: #d9d904;" + "-fx-border-color: black;");
                     }
                     else if(currentAttempt.getResult().charAt(i) == 'R'){    //lettera assente
-                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: white");
+                        matrix[player.getAttempts().size()-1][i].setStyle("-fx-background-color: white;" + "-fx-border-color: black;");
                     }
                 }
                 if(word.checkMatch(guess)){
