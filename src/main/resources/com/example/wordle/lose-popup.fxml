@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.controller.PopUpController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #be1313;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wordle.controller.PopUpController">
     <children>
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="86.0" text="TOO MANY ATTEMPT">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="42.0" layoutY="86.0" text="TOO MANY ATTEMPT" textFill="#ffe7ce">
             <font>
                 <Font name="System Bold" size="50.0" />
             </font>
