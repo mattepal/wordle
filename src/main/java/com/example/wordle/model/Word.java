@@ -18,9 +18,9 @@ public class Word {
         Map<Integer, String> wordMap = new HashMap<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
-            int id = 1; // Iniziamo con ID 1 per la prima parola
+            int id = 1; // ID 1 per la prima parola
             while ((line = reader.readLine()) != null) {
-                if (!line.trim().isEmpty()) { // Ignora le righe vuote
+                if (!line.trim().isEmpty()) {
                     wordMap.put(id, line.trim());
                     id++;
                 }
