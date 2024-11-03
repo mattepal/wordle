@@ -145,6 +145,7 @@ public class Controller {
     private Player player;
     private Word word;
     private List<Character> letterWrite;
+
     @FXML
     public static Stage secondaryStage = new Stage();
 
@@ -221,11 +222,12 @@ public class Controller {
         }
         else if (player.isOutOfIndex()) {
             DebugLabel.setText("Number of attempts exhausted!");
-
             FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/com/example/wordle/lose-popup.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             secondaryStage.setTitle("LOST");
             secondaryStage.setScene(scene);
+            PopUpController popUpController = fxmlLoader.getController();
+            popUpController.setMessage("The right word was: " + word.getWord());
             secondaryStage.show();
         }
     }
